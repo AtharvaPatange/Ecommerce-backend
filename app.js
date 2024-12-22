@@ -17,12 +17,7 @@ const Product = require('./models/product');
 const app = express();
 
 // Middleware
-app.use(cors({
-  origin: ['https://ecommerce-frontend-murex-six.vercel.app/', 'http://localhost:3000', 'http://localhost:5000','https://ecommerce-frontend-78y88kz7d-atharvas-projects-1563b7b4.vercel.app/'], // Frontend URLs
-  credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
-}));
+app.use(cors());
 
 app.use(express.json());
 app.use(require('cookie-parser')());
